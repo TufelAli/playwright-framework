@@ -1,0 +1,40 @@
+{
+    "name": "playwright-framework",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "npx playwright test",
+        "test:headed": "npx playwright test --headed",
+        "test:single": "npx playwright test POST.test.ts --project=API",
+        "test:parallel": "npx playwright test --grep @Smoke --project=Chrome",
+        "test:serial": "npx playwright test --grep @Smoke --workers=2 --project=Chrome",
+        "test:api": "npx playwright test --grep @API --workers=2 --project=Chrome",
+        "test:record": "npx playwright codegen",
+        "test:visual": "npx playwright test visualComparision.test.ts --project=Chrome",
+        "test:device": "npx playwright test Emulation.test.ts --project=Device",
+        "allureReport": "allure serve"
+    },
+    "keywords": [],
+    "author": "Tufel",
+    "license": "",
+    "dependencies": {
+        "@types/adm-zip": "^0.4.34",
+        "@types/crypto-js": "^4.1.0",
+        "@typescript-eslint/eslint-plugin": "^5.11.0",
+        "@typescript-eslint/parser": "^5.11.0",
+        "adm-zip": "^0.5.9",
+        "cross-env": "^7.0.3",
+        "crypto-js": "^4.1.1",
+        "eslint": "^8.9.0",
+        "eslint-plugin-import": "^2.25.4",
+        "experimental-allure-playwright": "0.0.3",
+        "pg": "^8.7.3",
+        "playwright": "^1.19.2"
+    },
+    "devDependencies": {
+        "@playwright/test": "^1.19.1",
+        "jest": "^27.5.1",
+        "typescript": "^4.5.5"
+    }
+}
